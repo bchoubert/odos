@@ -1,0 +1,56 @@
+{
+    "productName": "cloud",
+    "selectors": [
+        {
+            "name": "inner",
+            "choices": [
+                {
+                    "color": "#4285F4",
+                    "picture": "pictures/cloud-white.png"
+                },
+                {
+                    "color": "#00C851",
+                    "picture": "pictures/cloud-gray.png"
+                },
+                {
+                    "color": "#FF4444",
+                    "picture": "pictures/cloud-black.png"
+                }
+            ]
+        },
+        {
+            "name": "border",
+            "choices": [
+                {
+                    "color": "#FFBB33",
+                    "picture": "pictures/cloud-white-b.png"
+                },
+                {
+                    "color": "#2BBBAD",
+                    "picture": "pictures/cloud-gray-b.png"
+                },
+                {
+                    "color": "#FF3D00",
+                    "picture": "pictures/cloud-black-b.png"
+                }
+            ]
+        },
+        {
+            "name": "storm",
+            "choices": [
+                {
+                    "color": "#F44336",
+                    "picture": "pictures/storm-black.png"
+                },
+                {
+                    "color": "#00BCD4",
+                    "picture": "pictures/storm-yellow.png"
+                },
+                {
+                    "color": "#76FF03",
+                    "picture": "pictures/storm-no.png"
+                }
+            ]
+        }
+    ]
+}

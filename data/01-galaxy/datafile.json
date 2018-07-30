@@ -1,0 +1,56 @@
+{
+    "productName": "galaxy",
+    "selectors": [
+        {
+            "name": "background",
+            "choices": [
+                {
+                    "color": "#4285F4",
+                    "picture": "pictures/bg-black.png"
+                },
+                {
+                    "color": "#00C851",
+                    "picture": "pictures/bg-blue-lines.png"
+                },
+                {
+                    "color": "#76FF03",
+                    "picture": "pictures/bg-no.png"
+                }
+            ]
+        },
+        {
+            "name": "stars",
+            "choices": [
+                {
+                    "color": "#FFBB33",
+                    "picture": "pictures/stars-no.png"
+                },
+                {
+                    "color": "#2BBBAD",
+                    "picture": "pictures/stars-orange.png"
+                },
+                {
+                    "color": "#FF3D00",
+                    "picture": "pictures/stars-random.png"
+                },
+                {
+                    "color": "#FF4444",
+                    "picture": "pictures/stars-white.png"
+                }
+            ]
+        },
+        {
+            "name": "halo",
+            "choices": [
+                {
+                    "color": "#F44336",
+                    "picture": "pictures/galaxy-blue.png"
+                },
+                {
+                    "color": "#00BCD4",
+                    "picture": "pictures/galaxy-blur.png"
+                }
+            ]
+        }
+    ]
+}

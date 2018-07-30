@@ -1,0 +1,112 @@
+@keyframes imageCreation {
+    0% {
+        margin-top: 100%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+
+body, html {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#title {
+    font-family: 'VT323', monospace;
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    color: #FFFFFF;
+    text-shadow:
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+    transform: rotate(-6deg);
+    font-size: 300%;
+    z-index: 998;
+}
+
+#mainContent {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: stretch;
+    
+    .selector {
+        height: 100%;
+        flex: 1;
+        position: relative;
+        transition: all 0.5s;
+        
+        .arrow {
+            position: absolute;
+            width: 40px;
+            display: block;
+            left: calc(50% - 20px);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.5s;
+            
+            &:hover {
+                width: 60px;
+                left: calc(50% - 30px);
+            }
+        }
+        
+        .arrow-t {
+            top: 20px;
+        }
+        
+        .arrow-b {
+            bottom: 20px;
+        }
+    }
+}
+
+#imagesContainer {
+    position: absolute;
+    z-index: 999;
+    top: 15vh;
+    left: calc((100vw - 70vh) / 2);
+    width: 70vh;
+    height: 70vh;
+    display: block;
+    
+    #imagesContent {
+        width: 100%;
+        height: 0;
+        display: block;
+        position: relative;
+        
+        img {
+            margin: auto;
+            display: block;
+            height: auto;
+            width: 100%;
+            position: absolute;
+            margin-top: 0%;
+            
+            animation: imageCreation 0.5s ease-out;
+        }
+    }
+}
+
+@media screen and (orientation:portrait) {
+    #imagesContainer {
+        top: calc((100vh - 70vw) / 2);
+        left: 15vw;
+        width: 70vw;
+        height: 70vw;
+    }
+}

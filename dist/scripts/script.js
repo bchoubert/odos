@@ -1,7 +1,7 @@
 define("script", ["require", "exports", "animejs"], function (require, exports, anime) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var dataFolder = '/data/';
+    var dataFolder = 'data/';
     var datasetFolder = new URL(window.location.href).searchParams.get('dataset');
     var data = null;
     var title = document.getElementById('title');

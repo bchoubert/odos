@@ -4,7 +4,7 @@ import JsonType from './JsonType';
 import * as anime from 'animejs';
 
 // GETTING THE DATASET
-const dataFolder = '/data/';
+const dataFolder = 'data/';
 const datasetFolder = new URL(window.location.href).searchParams.get('dataset');
 var data = null;
 

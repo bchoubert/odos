@@ -29,6 +29,32 @@ body, html {
   z-index: 998;
 }
 
+#choiceContent {
+  height: 100%;
+  margin-left: 5%;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+#choiceContent #choiceTopSpace {
+  height: 10%;
+  width: 100%;
+  display: block;
+}
+#choiceContent .choice {
+  width: 16.6%;
+  display: inline-block;
+  height: 2em;
+  padding-top: 1em;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  color: #000000;
+}
+#choiceContent .choice:hover, #choiceContent .choice:active, #choiceContent .choice:visited, #choiceContent .choice:focus {
+  color: #000000;
+}
+
 #mainContent {
   display: flex;
   height: 100%;

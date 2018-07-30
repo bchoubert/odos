@@ -3,11 +3,9 @@ import JsonType from './JsonType';
 
 import * as anime from 'animejs';
 
-const host = 'https://odos-bertrand-choubert.c9users.io';
-
 // GETTING THE DATASET
 const dataFolder = '/data/';
-const datasetFolder = '6-storm';
+const datasetFolder = new URL(window.location.href).searchParams.get('dataset');
 var data = null;
 
 const title: HTMLElement = document.getElementById('title');
@@ -54,7 +52,7 @@ request.onreadystatechange = () => {
         parseDataset(request.responseText);
     }
 }
-request.open('GET', host + dataFolder + datasetFolder + '/datafile.json');
+request.open('GET', dataFolder + datasetFolder + '/datafile.json');
 request.send();
 
 var parseDataset = (dataset) => {
@@ -76,7 +74,7 @@ var parseDataset = (dataset) => {
     data.selectors.forEach((selector, index) => {
         var color = selector.choices[0].color;
         mainContent.innerHTML += templates.selector(color, selector.name, index + 1);
-        imagesContent.innerHTML += templates.image(host + dataFolder + datasetFolder + '/' + selector.choices[0].picture, selector.name, index + 1);
+        imagesContent.innerHTML += templates.image(dataFolder + datasetFolder + '/' + selector.choices[0].picture, selector.name, index + 1);
     });
 };
 
@@ -116,8 +114,6 @@ mainContent.addEventListener('click', (e) => {
         var imagesToDelete = document.querySelectorAll(`img[data-selector='${selectorId}']`);
         (<any> Array).from(imagesToDelete).forEach((imageToDelete) => imageToDelete.parentNode.removeChild(imageToDelete));
         
-        //imagesContent.innerHTML += templates.image(host + dataFolder + datasetFolder + '/' + choice.picture, selectorId);
-        
-        imagesContent.appendChild(templates.imageElement(host + dataFolder + datasetFolder + '/' + choice.picture, selectorId, selectorElement.getAttribute('data-index')));
+        imagesContent.appendChild(templates.imageElement(dataFolder + datasetFolder + '/' + choice.picture, selectorId, selectorElement.getAttribute('data-index')));
    }
 });
